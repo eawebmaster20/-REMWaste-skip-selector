@@ -61,7 +61,7 @@ export default function SkipSelection() {
         <div className="flex space-x-2 overflow-x-auto scrollbar-hide border-b border-gray-200 pb-2">
           {skips?.map((skip) => (
             <Button
-              // key={skip.size}
+              key={skip.size}
               variant={
                 selectedTab === skip.size.toString() ? "default" : "outline"
               }
