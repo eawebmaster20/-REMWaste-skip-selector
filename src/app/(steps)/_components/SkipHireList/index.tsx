@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import SkipCard from "../SkipCard";
 import { SkipType } from "@/types/skip.types";
 import { useGetSkipsQuery } from "../../_hooks/useGetSkipsQuery";
 import LoadingSpinner from "@/components/LoadingSpinner";
@@ -40,19 +39,6 @@ export default function SkipHireList() {
           <LoadingSpinner size="lg" className="mx-auto text-orange-500" />
         </div>
       )}
-
-      {/* skips loaded successfully */}
-      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {skips &&
-          skips.map((skip: SkipType) => (
-            <SkipCard
-              key={skip.id}
-              {...skip}
-              isSelected={selectedSkip === skip.id}
-              onSelect={handleSkipSelect}
-            />
-          ))}
-      </div> */}
 
       <SkipSelection />
 
