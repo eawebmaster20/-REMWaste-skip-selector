@@ -29,7 +29,7 @@ export default function FormNavigationPopup({
             {/* name and hire period  */}
             <div className="space-y-1">
               <h2 className="text-lg font-bold tracking-tight">
-                {props?.size} yard skip
+                {props?.size} Yard Skip
               </h2>
               <p className=" text-sm text-gray-500">
                 {props?.hire_period_days} day hire period
