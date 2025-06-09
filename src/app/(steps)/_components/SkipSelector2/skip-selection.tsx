@@ -9,12 +9,7 @@ import { Calendar, Truck, Weight, Info } from "lucide-react";
 import SecondFormNavigationPopup from "../SecondFormNavigationPopup";
 
 export default function SkipSelection() {
-  const {
-    data: skips,
-    isPending: skipsLoading,
-    isError: skipsError,
-    isFetched: skipsFetched,
-  } = useGetSkipsQuery();
+  const { data: skips, isError: skipsError } = useGetSkipsQuery();
   const [selectedSkip, setSelectedSkip] = useState<SkipType | null>(null);
   const [selectedTab, setSelectedTab] = useState<string>("8");
 
@@ -132,6 +127,8 @@ export default function SkipSelection() {
       {selectedSkip && (
         <SecondFormNavigationPopup isOpen={!!selectedSkip} {...selectedSkip} />
       )}
+      {/* skips loading error */}
+      {skipsError && <p>Error loading skips</p>}
     </div>
   );
 }

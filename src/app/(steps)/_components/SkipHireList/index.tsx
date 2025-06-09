@@ -15,22 +15,6 @@ export default function SkipHireList() {
     isError: skipsError,
   } = useGetSkipsQuery();
 
-  const { watch, setValue } = useForm();
-  const selectedSkip = watch("selectedSkip");
-  const [skip, setSkip] = useState<SkipType | null>(null);
-
-  const handleSkipSelect = (skip: SkipType) => {
-    // check if the skip is already selected
-    if (skip?.id === selectedSkip) {
-      setValue("selectedSkip", null); // deselect skip
-      setSkip(null); // update skip state
-      return;
-    }
-
-    setValue("selectedSkip", skip?.id); // set the value of the form
-    setSkip(skip); // update skip state
-  };
-
   return (
     <>
       {/* skips loading */}
@@ -44,9 +28,6 @@ export default function SkipHireList() {
 
       {/* skips loading error */}
       {skipsError && <p>Error loading skips</p>}
-
-      {/* bottom popup with selected skip and action buttons */}
-      {skip && <FormNavigationPopup isOpen={!!skip} {...skip} />}
     </>
   );
 }
