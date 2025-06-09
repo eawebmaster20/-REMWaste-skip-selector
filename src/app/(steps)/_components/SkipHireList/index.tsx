@@ -17,7 +17,7 @@ export default function SkipHireList() {
         </div>
       )}
 
-      <SkipSelection />
+      {!skipsLoading && <SkipSelection />}
 
       {/* skips loading error */}
       {skipsError && <p>Error loading skips</p>}
