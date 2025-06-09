@@ -7,6 +7,7 @@ import { useGetSkipsQuery } from "../../_hooks/useGetSkipsQuery";
 import LoadingSpinner from "@/components/LoadingSpinner";
 import { useForm } from "react-hook-form";
 import FormNavigationPopup from "../FormNavigationPopup";
+import SkipSelection from "../SkipSelector2/skip-selection";
 
 export default function SkipHireList() {
   const {
@@ -22,7 +23,7 @@ export default function SkipHireList() {
   const handleSkipSelect = (skip: SkipType) => {
     // check if the skip is already selected
     if (skip?.id === selectedSkip) {
-      setValue("selectedSkip", null);  // deselect skip
+      setValue("selectedSkip", null); // deselect skip
       setSkip(null); // update skip state
       return;
     }
@@ -41,7 +42,7 @@ export default function SkipHireList() {
       )}
 
       {/* skips loaded successfully */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {skips &&
           skips.map((skip: SkipType) => (
             <SkipCard
@@ -51,7 +52,9 @@ export default function SkipHireList() {
               onSelect={handleSkipSelect}
             />
           ))}
-      </div>
+      </div> */}
+
+      <SkipSelection />
 
       {/* skips loading error */}
       {skipsError && <p>Error loading skips</p>}
