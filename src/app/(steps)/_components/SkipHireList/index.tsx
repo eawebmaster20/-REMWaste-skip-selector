@@ -1,11 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
-import { SkipType } from "@/types/skip.types";
+import React from "react";
 import { useGetSkipsQuery } from "../../_hooks/useGetSkipsQuery";
 import LoadingSpinner from "@/components/LoadingSpinner";
-import { useForm } from "react-hook-form";
-import FormNavigationPopup from "../FormNavigationPopup";
 import SkipSelection from "../SkipSelector2/skip-selection";
 
 export default function SkipHireList() {
