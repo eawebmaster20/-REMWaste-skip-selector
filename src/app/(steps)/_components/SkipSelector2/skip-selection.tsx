@@ -26,18 +26,18 @@ export default function SkipSelection() {
         {skips?.map((skip) => (
           <div
             key={skip.size}
-            className={`relative min-w-[60px] sm:min-w-[60px] md:min-w-[60px] h-16 bg-white rounded-sm bg-gray-200 cursor-pointer flex-shrink-0
+            className={`relative min-w-[60px] sm:min-w-[60px] md:min-w-[60px] h-12 bg-white rounded-sm bg-gray-200 cursor-pointer flex-shrink-0
       ${
         selectedTab === skip.size.toString()
           ? "ring-2 ring-blue-500 ring-offset-2"
           : ""
-      }`}
+      }group`}
           >
             <Image
               src={`${process.env.NEXT_PUBLIC_IMAGE_URL}/${skip?.size}-yarder-skip.jpg`}
               alt={`${skip?.size} yarder skip`}
               fill
-              className="object-cover rounded-sm group-hover:scale-110 transition-all duration-300 ease-in-out"
+              className="object-fit rounded-sm group-hover:scale-110 transition-all duration-300 ease-in-out"
               priority={true}
               onClick={() => handleTabChange(skip)}
             />
