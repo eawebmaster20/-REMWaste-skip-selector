@@ -6,11 +6,7 @@ import LoadingSpinner from "@/components/LoadingSpinner";
 import SkipSelection from "../SkipSelector2/skip-selection";
 
 export default function SkipHireList() {
-  const {
-    data: skips,
-    isPending: skipsLoading,
-    isError: skipsError,
-  } = useGetSkipsQuery();
+  const { isPending: skipsLoading, isError: skipsError } = useGetSkipsQuery();
 
   return (
     <>
