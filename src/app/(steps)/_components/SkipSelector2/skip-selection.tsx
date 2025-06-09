@@ -22,7 +22,7 @@ export default function SkipSelection() {
   };
   return (
     <div className="flex flex-col">
-      <div className="flex mb-4 p-2 w-full justify-center border-b border-gray-200 pb-2 overflow-x-auto scrollbar-hide space-x-5">
+      <div className="flex mb-2 p-2 w-full border-b border-gray-200 pb-2 overflow-x-auto scrollbar-hide space-x-5">
         {skips?.map((skip) => (
           <div
             key={skip.size}
@@ -60,14 +60,18 @@ export default function SkipSelection() {
                   priority={true}
                 />
               ) : (
-                <div className="w-full h-full bg-gray-300 animate-pulse rounded-lg" />
+                <div className="w-full h-full bg-gray-300 animate-pulse rounded-lg">
+                  <p className="text-center text-gray-500 h-full flex justify-center items-center">
+                    Please select a skip to view image.
+                  </p>
+                </div>
               )}
             </div>
           </div>
         </div>
         <div className="flex flex-col space-y-4">
-          <h2 className="text-2xl font-bold mb-9">
-            {selectedSkip && (
+          {selectedSkip && (
+            <h2 className="text-2xl font-bold mb-9">
               <span className="flex gap-3">
                 <span>£{selectedSkip.price_before_vat}</span>
                 <span>
@@ -76,10 +80,10 @@ export default function SkipSelection() {
                   </small>
                 </span>
               </span>
-            )}
-          </h2>
+            </h2>
+          )}
           {/* Skip Details */}
-          {selectedSkip ? (
+          {selectedSkip && (
             <div className="mb-6 space-y-4">
               <div className="flex items-start">
                 <Calendar className="w-5 h-5 text-blue-500 mr-3 mt-0.5" />
@@ -123,7 +127,8 @@ export default function SkipSelection() {
                 </div>
               </div>
             </div>
-          ) : (
+          )}
+          {!selectedSkip && (
             <div>
               <p className="text-gray-500">
                 Please select a skip to view details.
