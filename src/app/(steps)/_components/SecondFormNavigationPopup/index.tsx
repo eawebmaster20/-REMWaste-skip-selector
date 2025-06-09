@@ -3,7 +3,6 @@ import {
   Sheet,
   SheetContent,
   SheetDescription,
-  SheetHeader,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { SkipType } from "@/types/skip.types";
