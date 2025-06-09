@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { useGetSkipsQuery } from "../../_hooks/useGetSkipsQuery";
 import Image from "next/image";
 import { SkipType } from "@/types/skip.types";
