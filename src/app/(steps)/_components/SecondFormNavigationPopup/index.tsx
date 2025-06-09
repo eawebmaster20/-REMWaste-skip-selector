@@ -6,6 +6,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { SkipType } from "@/types/skip.types";
+import { ArrowRight } from "lucide-react";
 
 interface SecondFormNavigationPopupProps extends SkipType {
   isOpen: boolean;
@@ -60,9 +61,9 @@ export default function FormNavigationPopup({
             </Button>
             <Button
               className="flex-1 md:flex-initial md:w-26 text-white"
-              style={{ backgroundColor: "var(--chart-2)" }}
+              style={{ backgroundColor: "var(--chart-2-b)" }}
             >
-              Continue
+              Continue <ArrowRight className="inline-block ml-2 w-4 h-4" />
             </Button>
           </div>
         </div>

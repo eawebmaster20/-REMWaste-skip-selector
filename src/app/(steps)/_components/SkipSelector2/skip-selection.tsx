@@ -37,7 +37,7 @@ export default function SkipSelection() {
               src={`${process.env.NEXT_PUBLIC_IMAGE_URL}/${skip?.size}-yarder-skip.jpg`}
               alt={`${skip?.size} yarder skip`}
               fill
-              className="object-cover rounded-sm w-full h-full transition-all duration-300 ease-in-out"
+              className="object-cover group-hover:scale-110 transition-all duration-300 ease-in-out"
               priority={true}
               onClick={() => handleTabChange(skip)}
             />
@@ -56,7 +56,7 @@ export default function SkipSelection() {
                   src={`${process.env.NEXT_PUBLIC_IMAGE_URL}/${selectedSkip?.size}-yarder-skip.jpg`}
                   alt={`${selectedSkip?.size} yarder skip`}
                   fill
-                  className="object-cover rounded-lg w-full h-full transition-all duration-300 ease-in-out"
+                  className="object-cover group-hover:scale-110 rounded-lg w-full h-full transition-all duration-300 ease-in-out"
                   priority={true}
                 />
               ) : (
@@ -71,14 +71,12 @@ export default function SkipSelection() {
         </div>
         <div className="flex flex-col justify-center space-y-4">
           {selectedSkip && (
-            <h2 className="text-2xl font-bold mb-9">
+            <h2 className="text-3xl font-bold mb-9">
               <span className="flex gap-3 flex-col">
                 <span>{selectedSkip?.size + " Yard Skip"}</span>
-                <small>
-                  <span style={{ color: "var(--chart-2)" }}>
-                    £{selectedSkip.price_before_vat}
-                  </span>
-                </small>
+                <span style={{ color: "var(--chart-2)" }}>
+                  £{selectedSkip.price_before_vat}
+                </span>
               </span>
             </h2>
           )}
