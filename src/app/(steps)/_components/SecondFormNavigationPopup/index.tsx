@@ -18,8 +18,12 @@ export default function FormNavigationPopup({
   return (
     <Sheet modal={false} open={isOpen}>
       <SheetTrigger>Open</SheetTrigger>
-      <SheetContent side="bottom" className="">
-        <div className="container p-2">
+      <SheetContent
+        side="bottom"
+        className="p-4"
+        style={{ backgroundColor: "var(--footer)" }}
+      >
+        <div className="container">
           {/* skip details  */}
           <div className="flex items-start justify-between">
             {/* name and hire period  */}
@@ -54,7 +58,12 @@ export default function FormNavigationPopup({
             >
               Back
             </Button>
-            <Button className="flex-1 md:flex-initial md:w-26">Next</Button>
+            <Button
+              className="flex-1 md:flex-initial md:w-26 text-white"
+              style={{ backgroundColor: "var(--chart-2)" }}
+            >
+              Continue
+            </Button>
           </div>
         </div>
       </SheetContent>

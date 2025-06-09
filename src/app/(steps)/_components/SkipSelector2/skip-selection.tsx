@@ -22,14 +22,14 @@ export default function SkipSelection() {
   };
   return (
     <div className="flex flex-col">
-      <div className="flex mb-2 p-2 w-full border-b border-gray-200 pb-2 overflow-x-auto scrollbar-hide space-x-5">
+      <div className="flex mb-4 p-2 w-full border-b border-gray-200 pb-4 overflow-x-auto scrollbar-hide space-x-5">
         {skips?.map((skip) => (
           <div
             key={skip.size}
             className={`relative min-w-[60px] sm:min-w-[60px] md:min-w-[60px] h-16 bg-white rounded-sm bg-gray-200 cursor-pointer flex-shrink-0
       ${
         selectedTab === skip.size.toString()
-          ? "ring-2 ring-orange-500 ring-offset-2"
+          ? "ring-2 ring-blue-500 ring-offset-2"
           : ""
       }`}
           >
@@ -48,7 +48,7 @@ export default function SkipSelection() {
         ))}
       </div>
       <div className="conianer grid grid-cols-1 md:grid-cols-2 gap-16">
-        <div className="flex h-70 gap-4 ">
+        <div className="flex h-80 gap-4 ">
           <div className="bg-white rounded-lg shadow-md w-full">
             <div className="relative w-full h-full">
               {selectedSkip ? (
@@ -69,16 +69,16 @@ export default function SkipSelection() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col space-y-4">
+        <div className="flex flex-col justify-center space-y-4">
           {selectedSkip && (
             <h2 className="text-2xl font-bold mb-9">
-              <span className="flex gap-3">
-                <span>£{selectedSkip.price_before_vat}</span>
-                <span>
-                  <small className="text-lg text-gray-500">
-                    {"( " + selectedSkip?.size + "Yard Skip )"}
-                  </small>
-                </span>
+              <span className="flex gap-3 flex-col">
+                <span>{selectedSkip?.size + " Yard Skip"}</span>
+                <small>
+                  <span style={{ color: "var(--chart-2)" }}>
+                    £{selectedSkip.price_before_vat}
+                  </span>
+                </small>
               </span>
             </h2>
           )}

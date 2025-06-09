@@ -46,7 +46,8 @@
 :root {
   --radius: 0.625rem;
   /* Dark theme colors by default */
-  --background: #0f182b;
+  --background: #121212;
+  --footer: #1c1c1c;
   --foreground: #ffffff;
   --card: #2a2a2a;
   --card-foreground: #ffffff;
@@ -80,7 +81,7 @@
 }
 
 .dark {
-  --background: #1a1a1a;
+  --background: #121212;
   --foreground: #ffffff;
   --card: #2a2a2a;
   --card-foreground: #ffffff;
