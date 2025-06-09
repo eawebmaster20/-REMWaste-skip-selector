@@ -26,9 +26,11 @@ export default function SkipSelection() {
       <div className="flex h-88 gap-4 ">
         <div className="flex flex-col space-y-2 w-15 border-b border-gray-200 pb-2">
           {skips?.map((skip) => (
-            <div className="card-height relative w-full h-65 bg-white rounded-sm bg-gray-200 cursor-pointer">
+            <div
+              key={skip.size}
+              className="card-height relative w-full h-65 bg-white rounded-sm bg-gray-200 cursor-pointer"
+            >
               <Image
-                key={skip.size}
                 src={`${process.env.NEXT_PUBLIC_IMAGE_URL}/${skip?.size}-yarder-skip.jpg`}
                 alt={`${skip?.size} yarder skip`}
                 fill
