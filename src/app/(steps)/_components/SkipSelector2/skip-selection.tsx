@@ -37,7 +37,7 @@ export default function SkipSelection() {
               src={`${process.env.NEXT_PUBLIC_IMAGE_URL}/${skip?.size}-yarder-skip.jpg`}
               alt={`${skip?.size} yarder skip`}
               fill
-              className="object-cover group-hover:scale-110 transition-all duration-300 ease-in-out"
+              className="object-cover rounded-sm group-hover:scale-110 transition-all duration-300 ease-in-out"
               priority={true}
               onClick={() => handleTabChange(skip)}
             />
