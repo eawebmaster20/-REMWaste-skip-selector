@@ -28,6 +28,7 @@ export default function SkipSelection() {
           {skips?.map((skip) => (
             <div className="card-height relative w-full h-65 bg-white rounded-sm bg-gray-200 cursor-pointer">
               <Image
+                key={skip.size}
                 src={`${process.env.NEXT_PUBLIC_IMAGE_URL}/${skip?.size}-yarder-skip.jpg`}
                 alt={`${skip?.size} yarder skip`}
                 fill
