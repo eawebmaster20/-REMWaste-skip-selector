@@ -41,8 +41,6 @@ This is a take-home assignment that involved redesigning the "Choose Your Skip S
 - **API Integration:** WeWantWaste API for skip data
 - **State Management:** Tanstack React Query
 - **Forms:** React Hook Form
-- **Testing:** Jest, React Testing Library
-- **E2E Testing:** Playwright
 - **Responsive Design:** Mobile-first approach
 
 ---
